@@ -6,9 +6,10 @@ body {
 	background-color: rgb(255, 255, 255);
 }
 
-#container {
+.wrapper {
 	margin: 0 auto;
 	width: 100%;
+	max-width: 1200px;
 }
 
 // ********* NAVBAR *********
@@ -163,6 +164,7 @@ body {
 	&__text {
 		display: flex;
 		flex-direction: column;
+		width: 100%;
 
 		p {
 			margin-top: 20px;
@@ -400,6 +402,8 @@ body {
 
 		.cards-container {
 			display: flex;
+			flex-direction: row;
+			justify-content: space-between;
 	}
 
 }
