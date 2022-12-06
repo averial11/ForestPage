@@ -11,8 +11,8 @@
 
 <body>
     <div id="container">
+     
         <!-- @include 'nav.kit' -->
-
 
 
         <header id="header" class="header">
@@ -70,9 +70,11 @@
 
 
 
-            <div class="wrapper">
 
-                <section id="offers" class="offers">
+            <section id="offers" class="offers">
+
+
+                <div class="wrapper">
                     <div class="offers__header">
                         <h2>oferta</h2>
                         <p>Wybierz jedną z naszych wspaniałych ofert!</p>
@@ -83,7 +85,7 @@
 
                         <div class="cards-container">
 
-                            <div class="cards-container__card">
+                            <div class="cards-container__card ">
 
                                 <div class="cards-container__tittle">
                                     <h2>Demo</h2>
@@ -101,11 +103,12 @@
                             </div>
 
 
-                            <div class="cards-container__card">
+                            <div class="cards-container__card standard-card">
                                 <div class="cards-container__tittle">
                                     <h2>Standard</h2>
                                     <p>$<span>99</span></p>
                                 </div>
+
                                 <ul class="text-standard">
                                     <li><i class="fas fa-check"></i>opcja w pakiecie</li>
                                     <li><i class="fas fa-check"></i>opcja w pakiecie</li>
@@ -127,54 +130,63 @@
                                     <li><i class="fas fa-check"></i>opcja w pakiecie</li>
                                     <li><i class="fas fa-check"></i>opcja w pakiecie</li>
                                     <li><i class="fas fa-check"></i>opcja w pakiecie</li>
-                                    <!-- <li class="none-option"><i class="fas fa-minus"></i>opcja poza pakietem</li> -->
+                                    <li><i class="fas fa-check"></i>opcja w pakiecie</li>
                                     <button class="chooseBtn">Wybierz</button>
                                 </ul>
                             </div>
-
-
-
                         </div>
                     </div>
-                    <div class="another-offers">
-                        <div class="another-offers__box">
-                            <a href="offers.html">Zobacz wszystkie oferty</a>
-                        </div>
-                    </div>
-                </section>
-            </div>
 
-            <section id="info">
-                <div class="info">
-                    <div class="info__container">
-
-                        <div class="info__logo">
-                            <i class="fas fa-tree"></i>
-                        </div>
-
-                        <div class="info__about">
-                            <h4>O nas</h4>
-                            <p>Historia</p>
-                            <p>Parki</p>
-                            <p>Opinie</p>
-                        </div>
-
-                        <div class="info__company">
-                            <h4>Nasza firma</h4>
-                            <p>Praca</p>
-                            <p>Kadry</p>
-                            <p>Zarząd</p>
-                        </div>
-
-                        <div class="info__docs">
-                            <h4>Dokumenty</h4>
-                            <p>Wnioski</p>
-                            <p>Rezerwacje</p>
-                        </div>
-
-                    </div>
 
             </section>
+    </div>
+
+    <div class="another-offers">
+
+        <div class="another-offers__box">
+            <a href="offers.html" class="another-offers__link">Stuknij tutaj</a>
+            <p>, jeśli chcesz zobaczyć wszystkie oferty.</p>
+        </div>
+
+    </div>
+    </div>
+
+    
+    <section id="info">
+        <div class="info">
+                <div class="wrapper">
+            
+            
+            <div class="info__container">
+                    <div class="info__logo">
+                        <a href="#"><i class="fas fa-tree"></i></a>
+
+                    </div>
+
+                    <div class="info__about">
+                        <h4>O nas</h4>
+                        <a href="">Historia</a>
+                        <a href="">Parki</a>
+                        <a href="">Opinie</a>
+                    </div>
+
+                    <div class="info__company">
+                        <h4>Nasza firma</h4>
+                        <a href="">Praca</a>
+                        <a href="">Kadry</a>
+                        <a href="">Zarząd</a>
+                    </div>
+
+                    <div class="info__docs">
+                        <h4>Dokumenty</h4>
+                        <a href="">Wnioski</a>
+                        <a href="">Rezerwacje</a>
+                    </div>
+
+                </div>
+
+        </section>
+    </div>
     </div>
 
 
@@ -183,7 +195,7 @@
     <!-- @include 'footer.kit' -->
 
     </div>
-    <script src="../dist/js/main.min.js"></script>
+    <script src="./dist/js/main.min.js"></script>
 </body>
 
 </html>

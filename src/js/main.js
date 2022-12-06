@@ -1,5 +1,5 @@
 const navbarList = document.querySelector('.navbar__list')
-const burgerBtn = document.querySelector('.burger-btn')
+const burgerBtn = document.querySelector('.hamburger')
 const allNavItems = document.querySelectorAll('.navbar__item')
 
 const showMenu = () => {

@@ -1,5 +1,6 @@
 @import './reset';
 @import './colors';
+@import './hamburger.scss';
 
 body {
 	font-family: 'Roboto', serif;
@@ -13,13 +14,6 @@ body {
 }
 
 // ********* NAVBAR *********
-.test-nav {
-	position: sticky;
-	top: 0;
-	height: 40px;
-	width: 100%;
-	background-color: rgba(255, 0, 0, 0.6);
-}
 
 .navbar {
 	position: sticky;
@@ -73,16 +67,12 @@ body {
 			}
 		}
 	}
-
-	.burger-btn {
-		right: 20px;
-		z-index: 10;
-		font-size: 2.6rem;
-		padding: 0.3em;
-		background: none;
-		color: $black;
-	}
 }
+
+
+
+
+
 
 .show-menu {
 	position: fixed;
@@ -117,7 +107,7 @@ body {
 
 	&__text {
 		position: absolute;
-		margin-left: 0;
+		margin-left: 20px;
 		top: 50%;
 		transform: translateY(-50%);
 		color: white;
@@ -168,10 +158,11 @@ body {
 			margin-top: 20px;
 			margin-left: 20px;
 			font-size: 1.1em;
-		}
-		p:nth-of-type(1) {
-			font-weight: bold;
-			font-size: 1.2em;
+
+			&:nth-of-type(1) {
+				font-weight: bold;
+				font-size: 1.2em;
+			}
 		}
 	}
 }
@@ -180,7 +171,7 @@ body {
 
 .adventure {
 	position: relative;
-	min-height: 15vh;
+	min-height: 25vh;
 	background-image: url(../img/girl_Small.jpg);
 	background-position: center;
 	background-repeat: no-repeat;
@@ -200,12 +191,12 @@ body {
 		position: absolute;
 		color: white;
 		font-size: 1.2em;
-		padding: 0.5em;
+		padding: 1.5em;
 		border: 1px groove white;
 		left: 50%;
 		top: 50%;
 		transform: translate(-50%, -50%);
-		font-weight: 400;
+		font-weight: 500;
 	}
 }
 
@@ -229,20 +220,18 @@ body {
 			margin-bottom: 20px;
 		}
 	}
-	&__container {
-		display: flex;
-		justify-content: center;
-		align-items: center;
-	}
 
 	.cards-container {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: center;
+		align-items: center;
 
 		&__card {
 			box-shadow: 0 0 5px 5px rgb(216, 216, 216);
-			border-radius: 5px;
-			border: none;
+			border-radius: 30px;
 			margin: 20px;
-			padding: 4em 6em;
+			padding: 2em 6em;
 		}
 		&__tittle {
 			display: flex;
@@ -263,11 +252,13 @@ body {
 			}
 		}
 		ul {
-			list-style-type: none;
-			line-height: 2.5em;
 			display: flex;
 			flex-direction: column;
-			flex-wrap: nowrap;
+			justify-content: center;
+			align-items: center;
+			list-style-type: none;
+			line-height: 2.5em;
+			width: 100%;
 
 			.fa-check {
 				margin-right: 5px;
@@ -284,26 +275,99 @@ body {
 				font-size: 1em;
 				font-weight: 500;
 				margin-top: 20px;
-				padding: 1em;
-				border-radius: 5px;
-				color: gray;
-				box-shadow: 0 0 10px 5px gray;
+				padding: 1em 2em;
+				border-radius: 10px;
+				color: black;
+				box-shadow: 0 0 3px 3px rgb(160, 237, 127);
+
+				&:hover {
+					background-color: rgb(211, 210, 210);
+					box-shadow: 0 0 3px 3px rgb(132, 132, 132);
+					transition: 0.3s;
+				}
 			}
 
 			.standardBtn {
 				color: black;
-				background-color: rgb(103, 191, 81);
-				box-shadow: 0 0 5px 5px rgb(55, 255, 0);
 				font-weight: 500;
+				&:hover {
+					background-color: rgb(103, 191, 81);
+					box-shadow: 0 0 3px 3px rgb(55, 255, 0);
+					transition: 0.3s;
+				}
+			}
+		}
+		.standard-card {
+			box-shadow: 0 0 5px 5px rgb(91, 207, 37);
+		}
+	}
+}
+
+// ALL OFFERS ///
+
+.another-offers {
+	&__box {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		margin: 20px;
+		font-size: 1.2em;
+	}
+	&__link {
+		display: inline-block;
+		color: green;
+		text-decoration: none;
+		&:hover{
+			color: rgb(3, 87, 3);
+		}
+	}
+}
+
+// FOTTER ///
+
+.info {
+	background-color: rgb(240, 237, 237);
+	width: 100%;
+	&__container {
+		display: flex;
+		justify-content: space-around;
+		align-items: center;
+		padding: 30px;
+
+		.fa-tree {
+			font-size: 2em;
+			color: black;
+		}
+
+		h4 {
+			margin-bottom: 5px;
+		}
+
+		a {
+			display: block;
+			color: rgb(74, 73, 73);
+			line-height: 1.4em;
+			&:hover {
+				color: black;
 			}
 		}
 	}
 }
 
+footer {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	padding: 10px;
+	font-weight: bold;
+	border-top: 1px solid black;
+	background-color: rgb(240, 237, 237);
+}
+
 // MEDIA //
 
 @media (min-width: 768px) {
-	.burger-btn {
+	.hamburger {
 		display: none;
 	}
 
@@ -331,7 +395,7 @@ body {
 			position: absolute;
 			color: white;
 			font-size: 1.4em;
-			padding: 0.5em;
+			padding: 1em;
 			border: 1px groove white;
 			left: 50%;
 			top: 50%;
@@ -397,16 +461,15 @@ body {
 			font-weight: 400;
 		}
 	}
-
-
-		.cards-container {
-			display: flex;
-			flex-direction: row;
-			justify-content: space-between;
+	.info {
+		&__container {
+			justify-content: space-evenly;
+			.fa-tree {
+				font-size: 2.4em;
+			}
+		}
 	}
-
 }
-
 
 @media (min-width: 1200px) {
 	.header {
@@ -452,6 +515,19 @@ body {
 			top: 50%;
 			transform: translate(-50%, -50%);
 			font-weight: 400;
+		}
+	}
+
+	.info {
+		&__container {
+			justify-content: space-evenly;
+
+			h4 {
+				font-size: 1.2em;
+			}
+			a {
+				font-size: 1em;
+			}
 		}
 	}
 }

@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Forest - Park</title>
-    <link rel="stylesheet" href="./dist/css/main.min.css">
+    <link rel="stylesheet" href="../dist/css/main.min.css">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;700&display=swap" rel="stylesheet">
@@ -15,6 +15,7 @@
 
 <body>
     <div id="container">
+     
         <nav class="navbar">
 
 
@@ -38,12 +39,14 @@
 
         </div>
 
-        <button class="burger-btn">
-            <i class="fas fa-bars"></i>
-        </button>
+        <button class="hamburger hamburger--arrow" type="button">
+            <span class="hamburger-box">
+              <span class="hamburger-inner"></span>
+            </span>
+          </button> 
+
     </div>
 </nav>
-
 
 
         <header id="header" class="header">
@@ -101,9 +104,11 @@
 
 
 
-            <div class="wrapper">
 
-                <section id="offers" class="offers">
+            <section id="offers" class="offers">
+
+
+                <div class="wrapper">
                     <div class="offers__header">
                         <h2>oferta</h2>
                         <p>Wybierz jedną z naszych wspaniałych ofert!</p>
@@ -114,7 +119,7 @@
 
                         <div class="cards-container">
 
-                            <div class="cards-container__card">
+                            <div class="cards-container__card ">
 
                                 <div class="cards-container__tittle">
                                     <h2>Demo</h2>
@@ -132,11 +137,12 @@
                             </div>
 
 
-                            <div class="cards-container__card">
+                            <div class="cards-container__card standard-card">
                                 <div class="cards-container__tittle">
                                     <h2>Standard</h2>
                                     <p>$<span>99</span></p>
                                 </div>
+
                                 <ul class="text-standard">
                                     <li><i class="fas fa-check"></i>opcja w pakiecie</li>
                                     <li><i class="fas fa-check"></i>opcja w pakiecie</li>
@@ -158,54 +164,63 @@
                                     <li><i class="fas fa-check"></i>opcja w pakiecie</li>
                                     <li><i class="fas fa-check"></i>opcja w pakiecie</li>
                                     <li><i class="fas fa-check"></i>opcja w pakiecie</li>
-                                    <!-- <li class="none-option"><i class="fas fa-minus"></i>opcja poza pakietem</li> -->
+                                    <li><i class="fas fa-check"></i>opcja w pakiecie</li>
                                     <button class="chooseBtn">Wybierz</button>
                                 </ul>
                             </div>
-
-
-
                         </div>
                     </div>
-                    <div class="another-offers">
-                        <div class="another-offers__box">
-                            <a href="offers.html">Zobacz wszystkie oferty</a>
-                        </div>
-                    </div>
-                </section>
-            </div>
 
-            <section id="info">
-                <div class="info">
-                    <div class="info__container">
-
-                        <div class="info__logo">
-                            <i class="fas fa-tree"></i>
-                        </div>
-
-                        <div class="info__about">
-                            <h4>O nas</h4>
-                            <p>Historia</p>
-                            <p>Parki</p>
-                            <p>Opinie</p>
-                        </div>
-
-                        <div class="info__company">
-                            <h4>Nasza firma</h4>
-                            <p>Praca</p>
-                            <p>Kadry</p>
-                            <p>Zarząd</p>
-                        </div>
-
-                        <div class="info__docs">
-                            <h4>Dokumenty</h4>
-                            <p>Wnioski</p>
-                            <p>Rezerwacje</p>
-                        </div>
-
-                    </div>
 
             </section>
+    </div>
+
+    <div class="another-offers">
+
+        <div class="another-offers__box">
+            <a href="offers.html" class="another-offers__link">Stuknij tutaj</a>
+            <p>, jeśli chcesz zobaczyć wszystkie oferty.</p>
+        </div>
+
+    </div>
+    </div>
+
+    
+    <section id="info">
+        <div class="info">
+                <div class="wrapper">
+            
+            
+            <div class="info__container">
+                    <div class="info__logo">
+                        <a href="#"><i class="fas fa-tree"></i></a>
+
+                    </div>
+
+                    <div class="info__about">
+                        <h4>O nas</h4>
+                        <a href="">Historia</a>
+                        <a href="">Parki</a>
+                        <a href="">Opinie</a>
+                    </div>
+
+                    <div class="info__company">
+                        <h4>Nasza firma</h4>
+                        <a href="">Praca</a>
+                        <a href="">Kadry</a>
+                        <a href="">Zarząd</a>
+                    </div>
+
+                    <div class="info__docs">
+                        <h4>Dokumenty</h4>
+                        <a href="">Wnioski</a>
+                        <a href="">Rezerwacje</a>
+                    </div>
+
+                </div>
+
+        </section>
+    </div>
     </div>
 
 
