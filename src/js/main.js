@@ -1,17 +1,27 @@
-const navbarList = document.querySelector('.navbar__list')
-const burgerBtn = document.querySelector('.hamburger')
-const allNavItems = document.querySelectorAll('.navbar__item')
+const nav = document.querySelector('.nav')
+const navBtn = document.querySelector('.burger-btn')
+const allNavItems = document.querySelectorAll('.nav__item')
 
-const showMenu = () => {
-    navbarList.classList.toggle('show-menu')
+const handleNav = () => {
+    nav.classList.toggle('nav--active')
 
     allNavItems.forEach(item => {
         item.addEventListener('click', () => {
-            navbarList.classList.remove('show-menu')
-          
+            nav.classList.remove('nav--active')
         })
     })
 
+    handleNavItemsAnimation()
 }
 
-burgerBtn.addEventListener('click', showMenu)
+const handleNavItemsAnimation = () => {
+    let delayTime = 0;
+
+allNavItems.forEach(item => {
+    item.classList.toggle('nav-items-animation')
+    item.style.animationDelay = '.' + delayTime + 's'
+    delayTime++
+})
+}
+
+navBtn.addEventListener('click', handleNav)

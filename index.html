@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Forest - Park</title>
-    <link rel="stylesheet" href="./dist/css/main.min.css">
+    <link rel="stylesheet" href="../dist/css/main.min.css">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;700&display=swap" rel="stylesheet">
@@ -15,58 +15,67 @@
 
 <body>
     <div id="container">
-
-        <nav class="navbar">
-
-
-    <div class="navbar__nav">
-
-        <div class="navbar__logo">
-            <a href="index.html" class="logo-icon"><i class="fas fa-tree"> </i></a>
-            <a href="index.html" class="logo-icon">
-                <p>Forest</p>
-            </a>
-
-        </div>
-
-        <div class="navbar__list">
-
-            <a href="index.html">Home</a>
-            <a class="navbar__item" href="#about">O nas</a>
-            <a class="navbar__item" href="#offers">Oferta</a>
-            <a href="contact.html">Kontakt</a>
-
-
-        </div>
-
-        <button class="hamburger hamburger--arrow" type="button">
-            <span class="hamburger-box">
-              <span class="hamburger-inner"></span>
-            </span>
-          </button> 
-
+        <!-- to powinien byc div -->
+<nav class="nav">
+    <!-- to powinien być nav bo zawiera element nawigacyjne -->
+    <div class="nav__items">
+        <a href="#" class="nav__item">Home</a>
+        <a href="#about" class="nav__item">O nas</a>
+        <a href="#offers" class="nav__item">Oferta</a>
+        <a href="#" class="nav__item">Kontakt</a>
     </div>
+
 </nav>
 
 
-        <header id="header" class="header">
-            <div class="header__background"></div>
+
+<!-- to powinien byc header v -->
+<nav class="nav-desktop">
+
+    <!-- header logo -->
+    <div class="nav-desktop__logo">
+        <a href="index.html" class="logo-icon">
+            <i class="fas fa-tree"></i> Forest</a>
+    </div>
+
+    <!-- nav -->
+    <div class="nav-desktop__items">
+        <a href="#" class="nav-desktop__item">Home</a>
+        <a href="#about" class="nav-desktop__item">O nas</a>
+        <a href="#offers" class="nav-desktop__item">Oferta</a>
+        <a href="contact.html" class="nav-desktop__item">Kontakt</a>
+    </div>
+
+
+</nav>
+
+<nav class="nav-mobile">
+    <div class="nav-desktop__logo">
+        <a href="index.html" class="logo-icon">
+            <i class="fas fa-tree"></i> Forest</a>
+    </div>
+</nav>
+<button class="burger-btn">
+    <div class="burger-btn__box">
+        <div class="burger-btn__bars"></div>
+    </div>
+</button>
+      
+
+
+  
+        <header id="header">
             <div class="wrapper">
                 <div class="header__text">
                     <p>Forest Group</p>
                     <h1>Najpiękniejszy park w Twojej okolicy!</h1>
                 </div>
             </div>
-
         </header>
-
-
 
         <main class="main">
             <div class="wrapper">
-
                 <section id="about">
-
                     <div class="about">
                         <h2>O nas</h2>
                         <div class="about__box">
@@ -84,17 +93,12 @@
                             </div>
                         </div>
                     </div>
-
-
-
                 </section>
             </div>
-
 
             <div class="adventure">
                 <div class="adventure__shadow">
                 </div>
-
                 <div class="wrapper">
                     <div class="adventure__text">
                         <p>Przygoda dla całej rodziny</p>
@@ -106,79 +110,79 @@
 
 
             <section id="offers" class="offers">
-
-
                 <div class="wrapper">
                     <div class="offers__header">
                         <h2>oferta</h2>
                         <p>Wybierz jedną z naszych wspaniałych ofert!</p>
                     </div>
 
-                    <div class="offers__container">
-
-
-                        <div class="cards-container">
-
-                            <div class="cards-container__card ">
-
-                                <div class="cards-container__tittle">
-                                    <h2>Demo</h2>
-                                    <p>$<span>0</span></p>
-                                </div>
-
-                                <ul class="text-demo">
-                                    <li><i class="fas fa-check"></i>opcja w pakiecie</li>
-                                    <li><i class="fas fa-check"></i>opcja w pakiecie</li>
-                                    <li class="none-option"><i class="fas fa-minus"></i>opcja poza pakietem</li>
-                                    <li class="none-option"><i class="fas fa-minus"></i>opcja poza pakietem</li>
-                                    <li class="none-option"><i class="fas fa-minus"></i>opcja poza pakietem</li>
-                                    <button class="chooseBtn ">Wybierz</button>
-                                </ul>
+                    <div class="cards-container">
+                        <div class="cards-container__card ">
+                            <div class="cards-container__tittle">
+                                <h2>Demo</h2>
+                                <p>$<span>0</span></p>
                             </div>
-
-
-                            <div class="cards-container__card standard-card">
-                                <div class="cards-container__tittle">
-                                    <h2>Standard</h2>
-                                    <p>$<span>99</span></p>
-                                </div>
-
-                                <ul class="text-standard">
-                                    <li><i class="fas fa-check"></i>opcja w pakiecie</li>
-                                    <li><i class="fas fa-check"></i>opcja w pakiecie</li>
-                                    <li><i class="fas fa-check"></i>opcja w pakiecie</li>
-                                    <li class="none-option"><i class="fas fa-minus"></i>opcja poza pakietem</li>
-                                    <li class="none-option"><i class="fas fa-minus"></i>opcja poza pakietem</li>
-                                    <button class="chooseBtn standardBtn">Wybierz</button>
-                                </ul>
-                            </div>
-
-
-                            <div class="cards-container__card">
-                                <div class="cards-container__tittle">
-                                    <h2>Premium</h2>
-                                    <p>$<span>299</span></p>
-                                </div>
-                                <ul class="text-standard">
-                                    <li><i class="fas fa-check"></i>opcja w pakiecie</li>
-                                    <li><i class="fas fa-check"></i>opcja w pakiecie</li>
-                                    <li><i class="fas fa-check"></i>opcja w pakiecie</li>
-                                    <li><i class="fas fa-check"></i>opcja w pakiecie</li>
-                                    <li><i class="fas fa-check"></i>opcja w pakiecie</li>
-                                    <button class="chooseBtn">Wybierz</button>
-                                </ul>
-                            </div>
+                            <ul class="text-demo">
+                                <li><i class="fas fa-check"></i>opcja w pakiecie</li>
+                                <li><i class="fas fa-check"></i>opcja w pakiecie</li>
+                                <li class="none-option"><i class="fas fa-minus"></i>opcja poza pakietem</li>
+                                <li class="none-option"><i class="fas fa-minus"></i>opcja poza pakietem</li>
+                                <li class="none-option"><i class="fas fa-minus"></i>opcja poza pakietem</li>
+                                <button class="chooseBtn ">Wybierz</button>
+                            </ul>
                         </div>
+
+
+
+                        <div class="cards-container__card standard-card">
+                            <div class="cards-container__tittle">
+                                <h2>Standard</h2>
+                                <p>$<span>99</span></p>
+                            </div>
+                            <ul class="text-standard">
+                                <li><i class="fas fa-check"></i>opcja w pakiecie</li>
+                                <li><i class="fas fa-check"></i>opcja w pakiecie</li>
+                                <li><i class="fas fa-check"></i>opcja w pakiecie</li>
+                                <li class="none-option"><i class="fas fa-minus"></i>opcja poza pakietem</li>
+                                <li class="none-option"><i class="fas fa-minus"></i>opcja poza pakietem</li>
+                                <button class="chooseBtn standardBtn">Wybierz</button>
+                            </ul>
+                        </div>
+                    
+
+
+                    <div class="cards-container__card">
+
+                        <div class="cards-container__tittle">
+                            <h2>Premium</h2>
+                            <p>$<span>299</span></p>
+                        </div>
+                        <ul class="text-standard">
+                            <li><i class="fas fa-check"></i>opcja w pakiecie</li>
+                            <li><i class="fas fa-check"></i>opcja w pakiecie</li>
+                            <li><i class="fas fa-check"></i>opcja w pakiecie</li>
+                            <li><i class="fas fa-check"></i>opcja w pakiecie</li>
+                            <li><i class="fas fa-check"></i>opcja w pakiecie</li>
+                            <button class="chooseBtn">Wybierz</button>
+                        </ul>
+
                     </div>
+                </div>
+                </div>
 
 
-            </section>
+    </div>
+    </div>
+
+    </div>
+
+    </section>
     </div>
 
     <div class="another-offers">
 
         <div class="another-offers__box">
-            <a href="offers.html" class="another-offers__link">Stuknij tutaj</a>
+            <a href="__item" class="another-offers__link">Stuknij tutaj</a>
             <p>, jeśli chcesz zobaczyć wszystkie oferty.</p>
         </div>
 
@@ -231,7 +235,21 @@
 </footer>
 
     </div>
-    <script src="./dist/js/main.min.js"></script>
+    <script src="../dist/js/main.min.js"></script>
 </body>
 
 </html>
+
+
+
+
+
+
+<!-- Jak zrobić podświetlenie danej sekcji w momencie gdy na niej jestem ?
+
+Dlaczego ostatnia karta nie jest takich samych wymiarów? np. powiększając czcionkę wszystko się psuje
+Czy wrappery są dobrze zrobione?
+
+Czy ID są dobrze zrobione? Może klasy powinny być?
+
+Po kliknięciu w daną sekcję powinno zjechać równo do tytuły podstrony-->
