@@ -285,7 +285,6 @@ body {
 		h2 {
 			font-size: 2em;
 			text-transform: uppercase;
-			color: $black;
 			font-weight: 300;
 			padding: 15px;
 		}
@@ -379,6 +378,89 @@ body {
 	}
 }
 
+// DETAILS OFFERS
+
+.details-offers {
+	width: 100%;
+	background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(../img/forest2_big.jpg) no-repeat;
+	background-size: cover;
+	background-position: center;
+	color: white;
+	&__header {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		h2 {
+			font-size: 2em;
+			text-transform: uppercase;
+			font-weight: 300;
+			padding: 15px;
+			color: white;
+		}
+
+		p {
+			margin-bottom: 20px;
+		}
+	}
+
+	.details-container {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		width: 100%;
+
+		&__card {
+			box-shadow: 0 0 5px 5px rgb(216, 216, 216);
+			border-radius: 30px;
+			margin: 20px;
+			padding: 2em 6em;
+		}
+		&__tittle {
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			align-items: center;
+			margin-bottom: 5px;
+
+			h2 {
+				font-size: 1.6em;
+				font-weight: 300;
+				margin-bottom: 10px;
+			}
+			p {
+				font-weight: 600;
+				font-size: 1.8em;
+				margin-bottom: 10px;
+			}
+		}
+		ul {
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			align-items: center;
+			list-style-type: none;
+			line-height: 2.5em;
+			font-size: 0.7em;
+
+			.fa-check {
+				margin-right: 5px;
+				color: green;
+			}
+			.fa-minus {
+				margin-right: 5px;
+			}
+			.none-option {
+				color: gray;
+			}
+		}
+		.standard-card {
+			box-shadow: 0 0 5px 5px rgb(91, 207, 37);
+		}
+	}
+}
+
 // ALL OFFERS ///
 
 .another-offers {
@@ -438,6 +520,110 @@ footer {
 	font-weight: bold;
 	border-top: 1px solid black;
 	background-color: rgb(240, 237, 237);
+}
+
+.contact {
+	position: relative;
+	z-index: -10;
+	width: 100vw;
+	margin: 0 auto;
+	max-width: 1200px;
+	height: 30vh;
+	background: rgba(0, 0, 0, 0.65) url(../img/forest2_small.jpg);
+	background-blend-mode: darken;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	&__header {
+		position: absolute;
+		border-left: 2px solid orangered;
+		padding: 10px 15px;
+		background-color: rgba(79, 75, 75, 0.5);
+		margin-left: 40px;
+		top: 50%;
+		width: 80%;
+		height: 80%;
+		border-radius: 10px;
+		transform: translateY(-50%);
+		color: white;
+	}
+	.contact-card {
+		display: flex;
+		flex-direction: column;
+		height: 100%;
+		h2 {
+			margin-top: 15px;
+			font-weight: 500;
+			font-size: 1.8em;
+		}
+		&__box {
+			display: flex;
+			flex-direction: row;
+			justify-content: space-around;
+			align-items: center;
+			height: 100%;
+			p {
+				margin-top: 10px;
+				font-weight: 300;
+				font-size: 1.1em;
+			}
+		}
+	}
+}
+
+.contact-container {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+
+	h2 {
+		margin: 15px;
+		color: black;
+		font-weight: 400;
+	}
+	&__form-box {
+		input {
+			display: block;
+			height: 40px;
+			width: 100%;
+			border-radius: 5px;
+			margin: 10px;
+			color: rgb(77, 75, 75);
+			font-weight: 300;
+			font-size: .9em;
+			background-color: rgba(199, 199, 197, 0.5);
+			padding: 10px 20px;
+			text-transform: uppercase;
+			border: none;
+			&:focus{
+				outline: gray solid;
+			}
+		}
+		#input-message{
+			text-transform: none;
+			height: 100px;
+		}
+	}
+	&__btn{
+		width: 120px;
+		height: 50px;
+		border-radius: 5px;
+		background-color: rgb(228, 99, 52);
+		font-size: 1.1em;
+		color: white;
+		&:hover{
+			background-color: rgb(225, 125, 37);
+			transition: .3s;
+		}
+	}
+	&__map {
+		width: 100%;
+		height: 450px;
+		margin: 0 auto;
+		max-width: 1200px;
+		margin-top: 20px;
+		background-color: rgb(152, 145, 178);
+	}
 }
 
 // MEDIA //
@@ -503,6 +689,20 @@ footer {
 	.another-offers {
 		&__box {
 			font-size: 1.2em;
+		}
+	}
+
+	.contact {
+		height: 40vh;
+		background: rgba(0, 0, 0, 0.65) url(../img/forest2_big.jpg);
+		&__header {
+			width: 60%;
+			height: 60%;
+		}
+		.contact-card {
+			p {
+				font-size: 1.2em;
+			}
 		}
 	}
 }
@@ -573,6 +773,16 @@ footer {
 			}
 		}
 	}
+
+	.details-offers {
+		height: 100%;
+		.details-container {
+			flex-direction: row;
+		}
+	}
+
+
+	
 }
 
 @media (min-width: 1200px) {
@@ -640,9 +850,15 @@ footer {
 	.offers {
 		.cards-container {
 			flex-direction: row;
-			&__card{
+			&__card {
 				width: 370px;
 			}
+		}
+	}
+
+	.contact-container {
+		h2 {
+			font-size: 1.8em;
 		}
 	}
 }

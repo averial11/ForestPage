@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="pl">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,19 +8,60 @@
     <title>Forest</title>
     <!-- @include 'styles.kit' -->
 </head>
+
 <body>
+    <!-- @include 'nav.kit' -->
+
+    <section id="contact" class="contact">
+        <div class="contact__header">
+            <div class="contact-card">
+                <h2>Dane kontaktowe</h2>
+                <div class="contact-card__box">
+                    <div class="contact-card__adress">
+
+                        <p>Gdańsk 80-000</p>
+                        <p>ul.Gdańska</p>
+                    </div>
+                    <div class="contact-card__phone">
+                        <p><i class="fas fa-phone"></i> 680-680-680</p>
+                        <p><i class="fas fa-envelope"></i> forest@mail.pl</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
 
-        <!-- @include 'nav.kit' -->
+    <div class="contact-container">
+        <h2>Napisz do nas</h2>
+        <div class="wrapper">
+            <form class="contact-container__form-box">
+                <input id="input-name" type="text" value="imię">
+                <input id="input-email" type="text" value="e-mail">
+                <input id="input-message" type="text" value="Powiedz nam, jak możemy pomóc">
+            </form>
+        </div>
+        <button type="submit" class="contact-container__btn">Wyślij</button>
+            <iframe class="contact-container__map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d19548.045623987306!2d20.99302942375528!3d52.23419768593077!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x471ecd155bebbe6b%3A0xb5e9269dcd8cfb82!2sRestauracja%20McDonald&#39;s!5e0!3m2!1spl!2spl!4v1673007392442!5m2!1spl!2spl"  style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </div>
 
-<section id="contact">
-    <p>kontakt tu bedzie</p>
-
-</section>
-   
-        
-
-    
+    <!-- @include 'footer.kit' -->
     <script src="../dist/js/main.min.js"></script>
+    <script src="../dist/js/contact.min.js"></script>
 </body>
+
 </html>
+
+<!-- <section id="contact">
+    <div class="contact-container">
+            <h2>Napisz do nas</h2>
+            <div class="contact-container__form">
+                <form id="contact-container__form-box">
+                    <input id="input-name" type="text" value="Podaj swoje imię" >
+                    <input id="input-email" type="text" value="Podaj swój e-mail">
+                    <input id="input-message" type="text" value="Powiedz nam, jak możemy pomóc">
+                </form>
+                <button type="submit" class="contact-cotainer__btn">Wyślij</button>
+            </div>
+    </div>
+</section> -->
